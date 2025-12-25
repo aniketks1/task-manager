@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Firefox */
+.scrollbar {
+  scrollbar-width: none;
+}
+
+/* Chrome, Edge, Safari */
+.scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  /* Navigation Title */
+  nav h1 {
+    font-size: 3rem !important;
+    line-height: 1.2;
+  }
+
+  /* Reduce Nav Spacing */
+  nav {
+    margin: 1rem 0 !important;
+    padding: 0.5rem 0 !important;
+  }
+
+  /* Input Field */
+  .app-div input[type="text"] {
+    width: 60vw !important;
+    min-width: 0;
+  }
+
+  /* Input Container */
+  .app-div>div:nth-child(2) {
+    width: 95%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Main Layout */
+  main {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    padding: 1rem !important;
+    margin: 0 !important;
+  }
+
+  /* Left Side (Filters) */
+  main aside:first-child {
+    width: 100%;
+    padding-right: 0 !important;
+    flex-direction: row !important;
+    justify-content: center;
+    gap: 1rem !important;
+    flex-wrap: wrap;
+  }
+
+  /* Remove vertical border on filters */
+  main aside:first-child::after {
+    display: none;
+  }
+
+  /* Filter Text */
+  main aside:first-child h2 {
+    font-size: 1.25rem !important;
+  }
+
+  /* Right Side (Task List) */
+  main aside:last-child {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+  }
+
+  /* List Container Height */
+  .scrollbar {
+    height: 100% !important;
+    max-height: none;
+  }
+
+  /* List Items */
+  .scrollbar>div {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  /* Navigation Title */
+  nav h1 {
+    font-size: 4.5rem !important;
+  }
+
+  /* Input Field */
+  .app-div input[type="text"] {
+    width: 70vw !important;
+  }
+
+  /* Main Layout */
+  main {
+    gap: 1.5rem !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  /* List Items */
+  .scrollbar>div {
+    width: 100% !important;
+  }
+}
